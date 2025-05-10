@@ -6,10 +6,10 @@ const Home = () => {
     <div className="home-container">
       <header className="hero">
         <div className="hero-content">
-          <h1>Welcome to HackForge</h1>
-          <p>Your AI-powered mentor for hackathon success.</p>
+          <h1>HackForge</h1>
+          <p>Transform your ideas into reality with AI-powered mentorship</p>
           <div className="hero-buttons">
-            <Link to="/login" className="btn btn-primary">Login</Link>
+            <Link to="/login" className="btn btn-primary">Get Started</Link>
             <Link to="/signup" className="btn btn-secondary">Sign Up</Link>
           </div>
         </div>
@@ -17,16 +17,16 @@ const Home = () => {
 
       <section className="features">
         <div className="feature-card">
-          <h3>Idea Development</h3>
-          <p>Transform your hackathon ideas into well-structured projects with AI guidance.</p>
+          <h3>AI Mentorship</h3>
+          <p>Get personalized guidance and feedback from our advanced AI mentors to refine your ideas.</p>
         </div>
         <div className="feature-card">
-          <h3>Pitch Analysis</h3>
-          <p>Get feedback on your pitch videos to improve your presentation skills.</p>
+          <h3>Video Analysis</h3>
+          <p>Improve your pitch with our AI-powered video analysis and detailed feedback.</p>
         </div>
         <div className="feature-card">
-          <h3>Mentor Support</h3>
-          <p>Access personalized mentorship to navigate hackathon challenges.</p>
+          <h3>Project Tracking</h3>
+          <p>Keep your hackathon projects organized and track your progress effectively.</p>
         </div>
       </section>
     </div>

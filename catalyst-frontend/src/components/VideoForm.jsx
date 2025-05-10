@@ -17,14 +17,13 @@ const VideoForm = () => {
       setResponse(data);
     } catch (err) {
       setError('Failed to analyze video. Please try again.');
-      console.error(err);
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="video-form">
+    <div className="form-container">
       <h2>Analyze Your Pitch Video</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -38,17 +37,22 @@ const VideoForm = () => {
             required
           />
         </div>
-        <button type="submit" disabled={loading} className="primary-button">
+        <button type="submit" disabled={loading} className="auth-button">
           {loading ? 'Analyzing...' : 'Analyze Video'}
         </button>
       </form>
       
-      {error && <div className="error">{error}</div>}
+      {error && <div className="error-message">{error}</div>}
       
       {response && (
-        <div className="response">
-          <h3>Video Analysis:</h3>
-          <div className="response-content">
+        <div className="response" style={{ marginTop: '2rem' }}>
+          <h3>Analysis Results</h3>
+          <div style={{ 
+            background: 'var(--background)', 
+            padding: '1.5rem', 
+            borderRadius: '8px',
+            marginTop: '1rem' 
+          }}>
             {response.video_analysis}
           </div>
         </div>
